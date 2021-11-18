@@ -15,7 +15,7 @@ monthly_challenges = {
     "september": "Respect Everyone!",
     "october": "Master GK",
     "november": "Learn how to live",
-    "december": "Do nothing",
+    "december": None,
 }
 
 # Create your views here.
