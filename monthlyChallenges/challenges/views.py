@@ -1,6 +1,8 @@
+from django.http.response import Http404
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
+from django.template.loader import render_to_string
 
 # Create your views here.
 monthDictionary = {
@@ -15,7 +17,7 @@ monthDictionary = {
     "september":"Eat each and every snacks",
     "october":"Eat no chicken this month",
     "november":"Learn nothing this month",
-    "december":"Go to Gym"
+    "december":None
 }
 
 
@@ -48,4 +50,4 @@ def monthlyChallenge(request, month):
                 "curMonth": i
             })
     else:
-        return HttpResponseNotFound("Invalid Month")
+        raise Http404()
