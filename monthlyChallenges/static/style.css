@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Corinthia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 
 html{
-    font-family: 'Corinthia', cursive;
+    font-family: 'Raleway', sans-serif;
 }
 
 body{
     margin:0;
-    font-family: 'Corinthia', cursive;
+    background-color: #1a1a1a;
 }
