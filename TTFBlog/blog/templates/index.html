@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pageTitle %}TTF Blog{% endblock %}
+
+{% block pageCSS %}
+<link rel="stylesheet" href= "{% static 'index.css' %}">
+{% endblock %}
+
+{% block pageContent %}
+
+<section id="welcome">
+    <header>
+      <img src="{% static "images/ttf.jpg" %}" alt="TTF - The Author Of This Blog" />
+      <h2>TTF Blog</h2>
+    </header>
+    <p>The Tech Firm special blogs</p>
+  </section>
+
+<a href="{% url "post"%}">
+    <p id="all-posts">
+        All Posts
+    </p>
+</a>
+
+</div>
+<section id="latest-posts">
+    <h2>My Latest Thoughts</h2>
+  
+    <ul>
+      {% for p in posts %}
+      <div class="post-section">
+        <h1>{{ p.title }}</h1>
+        <h3>
+            {{ p.author_name }}
+        </h3>
+        <p>
+            {{ p.content }}
+        </p>
+    </div>
+      {% endfor %}
+    </ul>
+</section>
+
+<a class="btn" href={% url 'post' %}>
+    Read More
+</a>
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block pageTitle %}Home{% endblock %}
+{% block pageCSS %}
+<link rel="stylesheet" href="{% static "post.css"%}">
+{% endblock %}
+
+{% block pageContent %}
+<ul>
+{% for p in posts %}
+<a href="{% url 'post-detail' p.id %}" class="link">
+    <div id="post">
+            <h1>{{ p.title }}</h1>
+            <h3>
+                {{ p.author_name }}
+            </h3>
+            <p>
+                {{ p.content }}
+            </p>
+        </div>
+    </a>
+{% endfor %}
+</ul>
+{% endblock %}

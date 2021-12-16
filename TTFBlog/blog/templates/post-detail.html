@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block pageTitle %}All Posts{% endblock %}
+{% block pageCSS %}
+<link rel="stylesheet" href="{% static "post-detail.css"%}">
+{% endblock %}
+
+{% block pageContent %}
+<div>
+    <h1>{{post.title}}</h1>
+    <h3>{{ post.author_name  }}</h3>
+    <p>{{ post.content  }}</p>
+</div> 
+{% endblock %}
+
