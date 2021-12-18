@@ -1,0 +1,14 @@
+{% extends 'bookOutlet/base.html' %}
+
+{% block pageTitle %}
+    All Books
+{% endblock %}
+
+{% block pageContent %}
+    <ul>
+        {% for items in books %}
+        <li>Book Name -- <a href="{{ items.get_absolute_url }}">{{ items.title }}</a> :: Author -- {{items.author}} :: Rating -- {{items.rating}}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
