@@ -7,7 +7,7 @@
 {% block pageContent %}
     <ul>
         {% for items in books %}
-        <li>Book Name -- <a href="{{ items.get_absolute_url }}">{{ items.title }}</a> :: Author -- {{items.author}} :: Rating -- {{items.rating}}</li>
+            <li><a href="{{ items.get_absolute_url }}">{{ items.title }}</a>(Rating {{items.rating}})</li>
         {% endfor %}
     </ul>
 

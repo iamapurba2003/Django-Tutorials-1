@@ -11,7 +11,7 @@ def index(request):
     })
 
 
-def bookDetail(request, id):
+def bookDetail(request, slug):
     # try:
     #     books = Book.objects.get(pk=id)
     # except Exception:
@@ -19,7 +19,7 @@ def bookDetail(request, id):
     
     # the below code also execute the same way as the above code block...
     
-    books = get_object_or_404(Book, pk=id)
+    books = get_object_or_404(Book, slug=slug)
     
     return render(request, "bookOutlet/bookDetail.html",{
         "bookTitle":books.title,
