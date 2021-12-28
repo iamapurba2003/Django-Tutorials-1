@@ -1,2 +1,2 @@
-./monthlyChallenges/__pycache__
-./challenges/__pycache__
+__pycache__
+db.sqlite3
