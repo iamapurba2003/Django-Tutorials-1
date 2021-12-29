@@ -7,9 +7,12 @@
 	<title>Your Review </title>
 </head>
 <body>
-	<form >
-	<label for="username">Your Name</label>
-	<input name="username" type='text' id='username'>
+	<form method="POST" action="/">
+	{% for fields in form %}
+		{{ fields.label }}
+		{{ fields }}
+		{{ fields.error }}
+	{% endfor %}
 	<button>Send</button>
 	</form>
 
