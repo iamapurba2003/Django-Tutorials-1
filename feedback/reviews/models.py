@@ -4,5 +4,5 @@ from django.db import models
 
 class ReviewModel(models.Model):
     user_name = models.CharField(max_length=100)
-    review_Text = models.CharField()
+    review_Text = models.CharField(max_length=1000)
     rating = models.IntegerField()
